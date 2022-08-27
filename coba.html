@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pilihan Ganda</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+	<h1>Bank Soal</h1>
+	<label for="">Nama</label><br>
+	<input type="text" id="nama"><br>
+	<label for="">No Absen</label><br>
+	<input type="number" id="absen"><br>
+	<label for="">Nilai :</label><div id="nilai"></div>
+	<hr>
+	<h4>I. Pilihan ganda</h4>
+
+	<!-- Soal nomor 1 -->
+	<label for="">1. Warna bendera Indonesia adalah .....</label><br>
+	<input type="radio" name="no1"> Biru Putih <br>
+	<input type="radio" name="no1" id="jno1"> Merah Putih <br>
+	<input type="radio" name="no1"> Merah Hijau <br>
+	<input type="radio" name="no1"> Hijau Kuning <br>
+	<div id="rno1"></div>
+
+	<!-- Soal nomor 2 -->
+	<label for="">2. Ibu kota Indonesia adalah .....</label><br>
+	<input type="radio" name="no2" id="jno2"> Jakarta <br>
+	<input type="radio" name="no2"> Surabaya <br>
+	<input type="radio" name="no2"> Baku <br>
+	<input type="radio" name="no2"> Bali <br>
+	<div id="rno2"></div>
+
+	<button onclick="kirim()">Kirim</button>
+
+	<script type="text/javascript">
+		function kirim() {
+			const jno1 = document.querySelector('#jno1');
+			const jno2 = document.querySelector('#jno2');
+
+			const rno1 = document.querySelector('#rno1');
+			const rno2 = document.querySelector('#rno2');
+			const nilai = document.querySelector('#nilai');
+
+			let response
+			let poin = 0;
+			// Soal nomor 1
+			if(jno1.checked) {
+				response = 'Jawaban kamu benar';
+				rno1.style = 'color: green;';
+				poin+=10;
+			}
+
+			else {
+				response = 'Jawaban kamu salah';
+				rno1.style = 'color: red;';
+			}
+			rno1.innerHTML = response;
+
+			// Soal nomor 2
+			if(jno2.checked) {
+				response = 'Jawaban kamu benar';
+				rno2.style = 'color: green;';
+				poin+=10;
+			}
+
+			else {
+				response = 'Jawaban kamu salah';
+				rno2.style = 'color: red;';
+			}
+			rno2.innerHTML = response;
+
+			nilai.innerHTML = poin;
+		}
+
+
+	</script>
+
+	
+
+</body>
+</html>

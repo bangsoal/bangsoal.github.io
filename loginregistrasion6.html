@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registrasion Form</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- ICONSOUT CSS -->
+	<link rel="stylesheet" type="text/css" href="https://unicons.iconsout.com/release/v4.0.0/css/line.css">
+	<!-- My CSS -->
+	<link rel="stylesheet" type="text/css" href="loginregistrasion6.css">
+	<!-- Google Fonts -->
+	
+</head>
+<body>
+	<div class="form_registrasion">
+		<center><h2>Registrasion</h2></center>
+		<input type="email" placeholder="Email" required id="emailregistrasion" autocomplete="off"><br><br>
+		<input type="password" placeholder="Password" required id="passwordregistrasion"><br><br>
+		<a href="loginregistrasion4.html">Login</a><br><br>
+		<button onclick="register()" id="registrasion_btn">Register</button>
+	</div>
+	<script type="text/javascript">
+		let emailregistrasion = document.getElementById('emailregistrasion');
+		let passwordregistrasion = document.getElementById('passwordregistrasion');
+
+
+		function register() {
+			localStorage.setItem("email", emailregistrasion.value);
+			window.location.assign('index.html');
+			alert('Selamat datang ' + emailregistrasion.value + ' ' + "!");
+		}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Form</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- ICONSOUT CSS -->
+	<link rel="stylesheet" type="text/css" href="https://unicons.iconsout.com/release/v4.0.0/css/line.css">
+	<!-- My CSS -->
+	<link rel="stylesheet" type="text/css" href="loginregistrasion4.css">
+	<!-- Google Fonts -->
+	
+</head>
+<body>
+	<div class="form_login">
+		<center><h2>Login</h2></center>
+		<input type="email" placeholder="Email" required id="emaillogin" autocomplete="off"><br><br>
+		<input type="password" placeholder="Password" required id="passwordlogin"><br><br>
+		Don't have an account yet ? <a href="loginregistrasion6.html">Register Now !</a><br><br>
+		<button onclick="login()" id="login_btn">Login</button>
+	</div>
+	<script type="text/javascript">
+		let emaillogin = document.getElementById('emaillogin');
+		let passwordlogin = document.getElementById('passwordlogin');
+
+
+		function login() {
+			if (localStorage.getItem('email') === "emaildummy@gmail.com") {
+				window.location.assign('index.html');
+				alert('Selamat datang ' + emaillogin.value + ' ' + "!");
+			} else {
+				alert('Maaf email anda tidak terdaftar di sistem kami.');
+				window.location.assign('loginregistrasion4.html');
+			}
+		}
+	</script>
+
+</body>
+</html>

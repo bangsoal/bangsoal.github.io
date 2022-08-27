@@ -1,0 +1,38 @@
+body {
+	min-height: 1000px;
+}
+
+div.header {
+	background: radial-gradient(#fff, #ffd6d6);
+	height: 100vh;
+}
+
+div.header img {
+	width: 75vw;
+	height: 80vh;
+}
+
+div.subjects {
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+}
+
+div.subjects .subjects_button {
+	padding: 10px 16px;
+	border-radius: 30px;
+	background: #ff523b;;
+	border: none;
+	transition: background 0.5s;
+}
+
+div.subjects .subjects_button:hover {
+	background: #563434;
+}
+
+@media only screen and (max-width: 650px) {
+	div.subjects {
+		display: grid;
+		grid-template-columns: auto;
+		gap: 20px;
+	}
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Log In</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="loginregister3.css">
+</head>
+<body>
+
+<div class="hero">
+	<div class="big-container">
+		<center><div class="container">
+			<h2>Login</h2>
+			<input type="text" id="usernameinput" class="input-field" required placeholder="Username"><br><br>
+			<input type="password" class="input-field" id="passwordinput" required placeholder="Password"><br><br>
+			<button id="loginbutton" onclick="login()" class="submit-btn">Log In</button>
+		</div></center>
+	</div>
+</div>
+
+<script type="text/javascript">
+	let usernameinput = document.getElementById('usernameinput');
+	let passwordinput = document.getElementById("passwordinput");
+	let loginbutton = document.getElementById('loginbutton');
+
+	function login() {
+		localStorage.setItem('username', usernameinput.value);
+		window.location.assign('index.html');
+		alert('Selamat datang ' + usernameinput.value + ' ' + "!");
+	}
+</script>
+
+</body>
+</html>

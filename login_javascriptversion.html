@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style type="text/css">
+	#root {
+		background-color: tomato;
+		color: white;
+		font-size: 2em;
+		text-align: center;
+		height: 100vh;
+	}
+</style>
+<body>
+
+	<div id="root">
+		<input type="text" placeholder="username" id="usernameInput">
+		<input type="password" placeholder="password" id="passwordInput">
+		<button onclick="onLogin()">Log In</button>
+	</div>
+
+	<script>
+		// DOM / Document Object Model
+		// const myName = "Marco Samuel";
+		// const myHobby = "Playing Music, Trading,Coding and Math";
+
+		// let root = document.getElementById('root');
+		// root.textContent = myName + ' ' + myHobby;
+		// root.style.backgroundColor = "tomato";
+		// root.style.color = "white";
+		// root.style.fontSize = "2em";
+		// root.style.textAlign = "center";
+		// root.style.height =  "100vh";
+
+		let usernameInput = document.getElementById('usernameInput');
+		let passwordInput = document.getElementById('passwordInput')
+
+		function onLogin() {
+			console.log('tombol login di klik');
+			console.log(usernameInput.value);
+			console.log(passwordInput.value);
+
+			if(usernameInput.value == "admin" &% passwordInput.value == "admin123") {
+				alert('login sebagai admin');
+			} else {
+				alert('login sebagai user biasa');
+			}
+		}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+body {
+	background-image: linear-gradient(#EE6A5E, #3B3C5A);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	font-family: sans-serif;
+}
+
+div#nilai {
+	background-color: orange;
+	padding: 15px;
+	width: 15px;
+	border-radius: 7px;
+}
+
+button#btn-submit {
+	background-color: orange;
+	padding: 15px;
+	border-radius: 7px;
+	border: none;
+	font-weight: bold;
+	cursor: pointer;
+}
